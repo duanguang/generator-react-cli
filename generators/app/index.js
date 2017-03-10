@@ -16,11 +16,9 @@ var ReactPackage=yeoman.Base.extend({
     },
     generateBasic: function() {
         this.directory('src', 'src');
-        this.directory('data', 'data');
         this.copy('package.json', 'package.json');
-        this.copy('index.html', 'index.html');
         this.copy('README.md', 'README.md');
-        this.copy('webpack.config.js', 'webpack.config.js');
+        this.copy('webpack.dev.config', 'webpack.dev.config');
     },
     generateClient: function() {
         this.sourceRoot(path.join(__dirname, 'templates'));
