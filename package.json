@@ -1,12 +1,24 @@
 {
-  "name": "generator-react-redux",
+  "name": "generator-react-cli",
   "version": "1.0.0",
-  "description": "基于react+webpack+redux的项目目录快速生成器",
+  "description": "基于react+webpack的项目目录快速生成器",
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
+  "repository": "https://github.com/duanguang/generator-react-cli.git",
   "author": "duanguang",
+  "keywords": [
+    "cli",
+    "generator",
+    "generator-react",
+    "generator-react-cli",
+    "yeoman-generator"
+  ],
+  "bugs": {
+    "url": "https://github.com/duanguang/generator-react-cli/issues"
+  },
+  "homepage": "https://github.com/duanguang/generator-react-cli",
   "license": "MIT",
   "dependencies": {
     "chai": "^3.3.0",
