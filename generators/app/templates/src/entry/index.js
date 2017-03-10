@@ -5,6 +5,6 @@ import * as React from 'react';
 import * as ReactDOM from 'react-dom';
 import Counter from "../component/counter/Counter";
 ReactDOM.render(
-    <SignupForm ></SignupForm>,
+    <Counter ></Counter>,
     document.getElementById('app')
 );
