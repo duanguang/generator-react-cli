@@ -20,18 +20,23 @@ yo react-cli
 然后就会在此目录下生成以下目录结构：
 
 
-├── src
-│   ├── component
-│   │   └── App.js
-│   ├── entry
-│   │   └── yeoman.png
-│
-│
-├── node_modules
-├── webpack.dev.config.js
-├── webpack.dev.config.js
-├── package.json
-└── webpack.config.js
+
+    ├── src
+    │   ├── components
+    │   │   └── counter.js
+    │   ├── entry
+    │   │   └── index.js
+    │
+    │
+    │
+    │
+    │
+    │
+    ├── node_modules
+    ├── webpack.dev.config.js
+    ├── webpack.dev.config.js
+    ├── package.json
+    └── webpack.config.js
 
 
 yarn run dev
