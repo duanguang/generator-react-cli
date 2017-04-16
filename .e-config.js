@@ -55,3 +55,20 @@ module.exports = {
     },
     "entries": ['src/index']//入口文件的文件夹路径
 };
+/*const path = require('path');
+module.exports = function (configs) {
+    configs = Object.assign({}, configs, {
+        name: 'default',
+        open: false,
+        defaultPort: 8002,
+        devServer: Object.assign({},
+            configs.devServer,
+            {
+                proxy:undefined
+
+            }),
+        apps: ['home'],
+
+    });
+    return configs;
+};*/
