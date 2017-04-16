@@ -41,13 +41,13 @@ module.exports = {
                 "stage-0",
                 "react"
             ],
-            "cacheDirectory": true
-        },
-        "plugins": [
+            "cacheDirectory": true,
+             "plugins": [
             "add-module-exports",
             "transform-runtime",
             "transform-decorators-legacy",
-        ],
+        ]
+        }
     },
     "htmlWebpackPlugin": {
         "title": "",
