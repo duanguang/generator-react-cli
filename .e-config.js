@@ -1,4 +1,6 @@
 module.exports = {
+    "name":"store",
+    "apps":['home'],
     "open": false,
     "defaultPort": 8002,
     "server": "127.0.0.1",
