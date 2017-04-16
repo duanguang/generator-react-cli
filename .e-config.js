@@ -1,5 +1,5 @@
 module.exports = {
-    "name":"store",
+    "name":"default",
     "apps":['home'],
     "open": false,
     "defaultPort": 8002,
@@ -50,7 +50,7 @@ module.exports = {
         ],
     },
     "htmlWebpackPlugin": {
-        "title": ""/*O2O订单管理系统*/,
+        "title": "",
         "appMountId": ""/*root*/,
     },
     "entries": ['src/index']//入口文件的文件夹路径
