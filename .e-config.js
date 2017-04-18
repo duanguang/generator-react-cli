@@ -1,4 +1,23 @@
-module.exports = {
+var packageConfig=require('./package.json');
+module.exports = function (configs) {
+    configs = Object.assign({}, configs, {
+        name: packageConfig.name,
+        defaultPort: 8002,
+        devServer: Object.assign({},
+            configs.devServer,
+            {
+                proxy: [{
+                    context: ['/**', '!/app/**', '!/webpack/**', '!/webpack-dev-server/**', '!/sockjs-node/**', '!/index.html'],
+                    target: 'http://tstq1.360kad.com',
+                    changeOrigin: true
+                }]
+            }),
+        apps: ['home'],
+        entries: ['src/home/index']
+    });
+    return configs;
+};
+/*module.exports = {
     "name":"default",
     "apps":['home'],
     "open": false,
@@ -9,18 +28,15 @@ module.exports = {
     "devServer": {
         "noInfo": true,
         "proxy": undefined
-         /*proxy: [{
-         context: ['/**', '!/static/**', '!/webpack/**', '!/webpack-dev-server/**', '!/sockjs-node/**', '!/index.html'],
-         target: 'http://tstmanage.360kad.com
-         ',
-         changeOrigin: true
-         }]*/
+         //proxy: [{
+         //context: ['/**', '!/static/**', '!/webpack/**', '!/webpack-dev-server/**', '!/sockjs-node/**', '!/index.html'],
+         //target: 'http://tstmanage.360kad.com
+         //',
+         //changeOrigin: true
+         //}]
     },
     "postcss": {
         "autoprefixer": {
-            /**
-             * 参考dora配置
-             */
             "browsers": [
                 "last 2 versions",
                 "Firefox ESR",
@@ -51,24 +67,8 @@ module.exports = {
     },
     "htmlWebpackPlugin": {
         "title": "",
-        "appMountId": ""/*root*/,
+        "appMountId": "",
     },
-    "entries": ['src/index']//入口文件的文件夹路径
-};
-/*const path = require('path');
-module.exports = function (configs) {
-    configs = Object.assign({}, configs, {
-        name: 'default',
-        open: false,
-        defaultPort: 8002,
-        devServer: Object.assign({},
-            configs.devServer,
-            {
-                proxy:undefined
-
-            }),
-        apps: ['home'],
-
-    });
-    return configs;
+    "entries": ['src/index']
 };*/
+
